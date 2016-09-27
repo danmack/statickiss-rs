@@ -7,7 +7,6 @@
 extern crate image;
 
 use std::fs::File;
-use std::path::Path;
 
 /// Multiply with carry (MWC) component
 pub static mut X: usize = 1234567890987654321;
@@ -44,7 +43,7 @@ fn main() {
         }
     }
 
-    let ref mut fout = File::create(&Path::new("static.png")).unwrap();
+    let ref mut fout = File::create("static.png").unwrap();
     let _ = image::ImageLuma8(img).save(fout, image::PNG);
 }
 
