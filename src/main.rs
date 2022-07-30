@@ -43,8 +43,9 @@ fn main() {
         }
     }
 
-    let ref mut fout = File::create("static.png").unwrap();
-    let _ = image::ImageLuma8(img).save(fout, image::PNG);
+    // let ref mut fout = File::create("static.png").unwrap();
+    // let _ = image::Luma8(img).save(fout, image::PNG);
+    img.save("static.png").unwrap();
 }
 
 /// my attempt at implementing a 64-bit version of the KISS pseudo
